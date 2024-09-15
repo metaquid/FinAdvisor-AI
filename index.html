@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinAdvisor AI - Personalized Financial Advice with AI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+
+
+    <!-- Header with Logo -->
+    <header>
+        <div class="container">
+
+                <!--<img src="finadviserai-logo.jpeg" alt="FinAdvisor AI Logo" class="logo-img">-->
+		<div class="img-placeholder-logo" aria-label="FinAdvisor AI Logo">_____________FinAdvisor_AI</div>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="nav-link" onclick="showSection('home')">Home</a></li>
+                    <li><a href="#features" class="nav-link" onclick="showSection('features')">Features</a></li>
+                    <li><a href="#pricing" class="nav-link" onclick="showSection('pricing')">Plans</a></li>
+                    <li><a href="#blog" class="nav-link" onclick="showSection('blog')">Blog</a></li>
+                    <li><a href="#contact" class="nav-link" onclick="showSection('contact')">Contact</a></li>
+                    <li><a href="#signup" class="cta nav-link" onclick="showSection('signup')">Sign_Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="section active">
+        <div class="hero">
+            <div class="container">
+                <h1>Get Personalized Financial Advice Powered by Artificial Intelligence</h1>
+                <p>Simplify your financial decisions and discover how to invest better, save more, and achieve your life goals.</p>
+                <a href="https://www.metaquid.com/chatbot-en/#top" class="cta" target="_blank">Try it with AI</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section hidden">
+        <div class="container">
+            <h2>Powerful Tools, Intelligent Advice</h2>
+            <div class="feature-list">
+		<div class="feature">
+		<div class="img-placeholder"></div>
+		<h3>Concept Chain</h3>
+		<p>FinAdvisor AI sequence of concept chain for mind change.</p>
+		<div class="container-concept">
+		  <div id="conceptView" class="concept-box"></div>
+		</div>
+
+		<div class="button-container">
+		  <button class="nav-button" onclick="previous()">&#x21E6;</button>
+		  <button class="nav-button" onclick="next()">&#x21E8;</button>
+		</div>
+
+		</div>
+                <div class="feature">
+                    <div class="img-placeholder"></div>
+                    <h3>Personalized Advice</h3>
+                    <p>FinAdvisor AI analyzes your data and creates a tailored financial plan for you.</p>
+                </div>
+                <div class="feature">
+                    <div class="img-placeholder"></div>
+                    <h3>Investment Simulations</h3>
+                    <p>Test different strategies and see how they will impact your savings and investments.</p>
+                </div>
+                <div class="feature">
+                    <div class="img-placeholder"></div>
+                    <h3>Real-Time Monitoring</h3>
+                    <p>Get updates on your investments and notifications about market opportunities and risks.</p>
+                </div>
+                <div class="feature">
+                    <div class="img-placeholder"></div>
+                    <h3>Financial Education</h3>
+                    <p>Access educational resources to learn how to better manage your money.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section hidden">
+        <div class="container">
+            <h2>Choose the Right Plan for You</h2>
+            <div class="pricing-list">
+                <div class="pricing-option">
+                    <h3>Basic Plan</h3>
+		    <div class="img-placeholder"></div>
+                    <p>Free</p>
+                    <p>Access to basic features: personalized advice and simulations.</p>
+                    <a href="#" class="cta">Sign Up for Free</a>
+                </div>
+                <div class="pricing-option">
+                    <h3>Premium Plan</h3>
+		    <div class="img-placeholder"></div>
+                    <p>€9.99/month</p>
+                    <p>Real-time monitoring, advanced notifications, and specific investment advice.</p>
+                    <a href="#" class="cta">Upgrade to Premium</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section hidden">
+        <div class="container">
+            <h2>From Our Blog</h2>
+            <div class="blog-list">
+                <article>
+                    <div class="img-placeholder"></div>
+                    <h3>How AI is Changing Personal Finance</h3>
+                    <p>Discover the power of AI in making financial decisions more intelligent and personalized.</p>
+                    <a href="#" class="read-more">Read more</a>
+                </article>
+                <article>
+                    <div class="img-placeholder"></div>
+                    <h3>10 Investment Strategies for Beginners</h3>
+                    <p>Start growing your wealth with these smart investment tips, curated for beginners.</p>
+                    <a href="#" class="read-more">Read more</a>
+                </article>
+                <article>
+                    <div class="img-placeholder"></div>
+                    <h3>Saving for Retirement: What You Need to Know</h3>
+                    <p>Ensure a comfortable future by learning the best practices for saving towards retirement.</p>
+                    <a href="#" class="read-more">Read more</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section hidden">
+        <div class="container">
+            <h2>Contact Us</h2>
+	    <div class="img-placeholder"></div>
+            <form>
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button type="submit" class="cta">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Sign Up Section -->
+    <section id="signup" class="section hidden">
+        <div class="container">
+            <h2>Sign Up for FinAdvisor AI</h2>
+	    <div class="img-placeholder"></div>
+            <form>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" class="cta">Create Account</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+  <p>Share this concept</p>
+  <div class="social-icons">
+          <button class="social-icon share" data-href="https://x.com" aria-label="Share on x">
+        <?xml version="1.0" encoding="UTF-8"?>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="40px" viewBox="0 0 40 40" version="1.1">
+                <g id="surface1">
+                <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 17.867188 0.148438 C 10.839844 0.878906 4.558594 5.507812 1.707031 12.054688 C -0.132812 16.28125 -0.441406 21.148438 0.867188 25.625 C 2.480469 31.214844 6.652344 35.933594 12.054688 38.292969 C 16.28125 40.132812 21.148438 40.4375 25.628906 39.132812 C 32.332031 37.199219 37.613281 31.695312 39.347656 24.851562 C 42.054688 14.132812 35.414062 3.171875 24.667969 0.613281 C 22.304688 0.0546875 20.226562 -0.09375 17.867188 0.148438 Z M 18.132812 12.535156 C 19.839844 14.800781 21.28125 16.667969 21.332031 16.667969 C 21.386719 16.667969 23.160156 14.800781 25.253906 12.535156 L 29.078125 8.398438 L 31.253906 8.398438 L 30.785156 8.894531 C 30.519531 9.171875 28.785156 11.054688 26.933594 13.066406 C 25.078125 15.078125 23.265625 17.039062 22.90625 17.398438 L 22.265625 18.078125 L 27.265625 24.734375 C 30.011719 28.398438 32.265625 31.441406 32.265625 31.492188 C 32.265625 31.558594 30.628906 31.601562 28.640625 31.601562 L 25 31.585938 L 21.613281 27.054688 C 19.28125 23.921875 18.1875 22.574219 18.078125 22.652344 C 18 22.71875 16.105469 24.761719 13.867188 27.1875 L 9.800781 31.601562 L 8.773438 31.601562 C 8.199219 31.601562 7.734375 31.574219 7.734375 31.535156 C 7.734375 31.492188 9.851562 29.171875 12.441406 26.386719 C 15.011719 23.601562 17.148438 21.265625 17.171875 21.226562 C 17.1875 21.171875 15.066406 18.28125 12.464844 14.800781 C 9.867188 11.332031 7.734375 8.464844 7.734375 8.441406 C 7.734375 8.414062 9.371094 8.398438 11.386719 8.398438 L 15.039062 8.398438 Z M 18.132812 12.535156 "/>
+                <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 11.027344 10.1875 C 11.082031 10.28125 14.441406 14.785156 18.464844 20.171875 L 25.800781 29.988281 L 27.441406 30 C 28.453125 30 29.066406 29.945312 29.039062 29.867188 C 29.027344 29.800781 25.679688 25.292969 21.628906 19.867188 L 14.238281 10 L 12.585938 10 C 11.214844 10 10.933594 10.027344 11.027344 10.1875 Z M 11.027344 10.1875 "/>
+                </g>
+                </svg>      </button>
+          <button class="social-icon share" data-href="https://www.facebook.com" aria-label="Share on facebook">
+        <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 0C10.745 0 0 10.745 0 24C0 37.255 10.745 48 24 48C37.255 48 48 37.255 48 24C48 10.745 37.255 0 24 0ZM29.685 16.585H26.0775C25.65 16.585 25.175 17.1475 25.175 17.895V20.5H29.6875L29.005 24.215H25.175V35.3675H20.9175V24.215H17.055V20.5H20.9175V18.315C20.9175 15.18 23.0925 12.6325 26.0775 12.6325H29.685V16.585Z" fill="black"/></svg>      </button>
+          <button class="social-icon share" data-href="https://telegram.me" aria-label="Share on telegram">
+        <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48Z" fill="black"/>
+                        <path d="M20.5328 34.0625C19.6985 34.0625 19.8403 33.7475 19.5526 32.9532L17.0996 24.8804L35.9819 13.6782" fill="#EFF7FC" fill-opacity="0.74"/>
+                        <path d="M20.5312 34.0624C21.175 34.0624 21.4593 33.768 21.8187 33.4187L25.2518 30.0804L20.9694 27.498" fill="black" fill-opacity="0.74"/>
+                        <path d="M20.9692 27.4985L31.3458 35.1649C32.5301 35.8183 33.3845 35.4799 33.6795 34.0657L37.9034 14.1614C38.3357 12.4276 37.2425 11.641 36.1095 12.1554L11.3072 21.719C9.61427 22.3981 9.62436 23.3427 10.9987 23.7635L17.3635 25.7502L32.0988 16.4539C32.7944 16.032 33.433 16.2586 32.909 16.7238" fill="url(#paint0_linear)"/>
+                        <path d="M20.9692 27.4985L31.3458 35.1649C32.5301 35.8183 33.3845 35.4799 33.6795 34.0657L37.9034 14.1614C38.3357 12.4276 37.2425 11.641 36.1095 12.1554L11.3072 21.719C9.61427 22.3981 9.62436 23.3427 10.9987 23.7635L17.3635 25.7502L32.0988 16.4539C32.7944 16.032 33.433 16.2586 32.909 16.7238" fill="url(#paint1_linear)"/>
+                        <defs>
+                            <linearGradient id="paint0_linear" x1="28.48" y1="22.2629" x2="32.4984" y2="31.4184" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#EFF7FC"/>
+                                <stop offset="1" stop-color="white"/>
+                            </linearGradient>
+                            <linearGradient id="paint1_linear" x1="28.48" y1="22.2629" x2="32.4984" y2="31.4184" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#EFF7FC"/>
+                                <stop offset="1" stop-color="white"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>      </button>
+          <button class="social-icon share" data-href="https://www.linkedin.com" aria-label="Share on linkedin">
+        <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 0C10.745 0 0 10.745 0 24C0 37.255 10.745 48 24 48C37.255 48 48 37.255 48 24C48 10.745 37.255 0 24 0ZM18.125 33.9475H13.265V18.3075H18.125V33.9475ZM15.665 16.3875C14.13 16.3875 13.1375 15.3 13.1375 13.955C13.1375 12.5825 14.16 11.5275 15.7275 11.5275C17.295 11.5275 18.255 12.5825 18.285 13.955C18.285 15.3 17.295 16.3875 15.665 16.3875ZM35.875 33.9475H31.015V25.28C31.015 23.2625 30.31 21.8925 28.5525 21.8925C27.21 21.8925 26.4125 22.82 26.06 23.7125C25.93 24.03 25.8975 24.48 25.8975 24.9275V33.945H21.035V23.295C21.035 21.3425 20.9725 19.71 20.9075 18.305H25.13L25.3525 20.4775H25.45C26.09 19.4575 27.6575 17.9525 30.28 17.9525C33.4775 17.9525 35.875 20.095 35.875 24.7V33.9475Z" fill="black"/></svg>      </button>
+          <button class="social-icon share" data-href="https://reddit.com" aria-label="Share on reddit">
+        <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 48C10.7472 48 0 37.2528 0 24C0 10.7472 10.7472 0 24 0C37.2528 0 48 10.7472 48 24C48 37.2528 37.2528 48 24 48Z" fill="black"/><path d="M28.0909 28.4217C26.931 28.4217 25.9852 27.4759 25.9852 26.3159C25.9852 25.1559 26.931 24.2102 28.0909 24.2102C29.2509 24.2102 30.1967 25.1559 30.1967 26.3159C30.1967 27.4759 29.2509 28.4217 28.0909 28.4217ZM28.4628 31.8774C27.0239 33.3122 24.2715 33.4254 23.4631 33.4254C22.6548 33.4254 19.8983 33.3122 18.4635 31.8774C18.2492 31.6632 18.2492 31.3196 18.4635 31.1054C18.6777 30.8912 19.0212 30.8912 19.2354 31.1054C20.1408 32.0108 22.0768 32.3341 23.4631 32.3341C24.8454 32.3341 26.7855 32.0108 27.6908 31.1054C27.905 30.8912 28.2486 30.8912 28.4628 31.1054C28.673 31.3196 28.673 31.6632 28.4628 31.8774ZM16.7215 26.3159C16.7215 25.1559 17.6672 24.2102 18.8272 24.2102C19.9872 24.2102 20.933 25.1559 20.933 26.3159C20.933 27.4759 19.9872 28.4217 18.8272 28.4217C17.6672 28.4217 16.7215 27.4759 16.7215 26.3159ZM36.9303 24.2102C36.9303 22.5813 35.6127 21.2637 33.9838 21.2637C33.1876 21.2637 32.4682 21.579 31.9387 22.0923C29.9259 20.6373 27.1492 19.6996 24.0573 19.5904L25.3991 13.2732L29.7844 14.2068C29.837 15.3223 30.7504 16.2115 31.8781 16.2115C33.0421 16.2115 33.9838 15.2698 33.9838 14.1058C33.9838 12.9417 33.0421 12 31.8781 12C31.0495 12 30.3422 12.481 29.9987 13.1762L25.1 12.1334C24.9626 12.1051 24.8212 12.1293 24.7039 12.2061C24.5867 12.2829 24.5059 12.4001 24.4776 12.5376L23.0064 19.4692C22.9983 19.5096 23.0064 19.546 23.0064 19.5864C19.8579 19.6672 17.0286 20.609 14.9835 22.0842C14.454 21.5749 13.7386 21.2637 12.9464 21.2637C11.3176 21.2637 10 22.5854 10 24.2102C10 25.4065 10.7154 26.4372 11.742 26.8979C11.6975 27.189 11.6733 27.488 11.6733 27.7912C11.6733 32.326 16.9518 36 23.4631 36C29.9744 36 35.2529 32.326 35.2529 27.7912C35.2529 27.4921 35.2287 27.197 35.1842 26.906C36.2068 26.4453 36.9303 25.4146 36.9303 24.2102Z" fill="white"/></svg>      </button>
+  </div>
+	    
+            <p>&copy; 2024 FinAdvisor AI. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const effects = ['effect-1', 'effect-2', 'effect-3', 'effect-4', 'effect-5', 'effect-6', 'effect-7', 'effect-8', 'effect-9', 'effect-10'];
+    const placeholders = document.querySelectorAll('.img-placeholder');
+    
+    // Shuffle the effects array to assign unique effects initially
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+    
+    let shuffledEffects = shuffleArray(effects.slice()); // Copy and shuffle the effects array
+    let effectIndexes = {};
+
+    // Assign a unique effect to each placeholder
+    placeholders.forEach((placeholder, index) => {
+        const effect = shuffledEffects[index % shuffledEffects.length];
+        placeholder.classList.add(effect);
+        effectIndexes[placeholder] = effect;
+    });
+
+    function applyNextEffect() {
+        placeholders.forEach(placeholder => {
+            // Remove the current effect class
+            placeholder.classList.remove(effectIndexes[placeholder]);
+
+            // Update effect index and assign new effect
+            const currentEffectIndex = effects.indexOf(effectIndexes[placeholder]);
+            const nextEffectIndex = (currentEffectIndex + 1) % effects.length;
+            const nextEffect = effects[nextEffectIndex];
+
+            // Apply the new effect class
+            placeholder.classList.add(nextEffect);
+            effectIndexes[placeholder] = nextEffect;
+        });
+    }
+
+    // Change the effect every 10 seconds
+    setInterval(applyNextEffect, 10000);
+});
+</script>
+
+
+    <!-- JavaScript for tab switching -->
+    <script>
+        // Tab Switching Function
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.add('hidden'));
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+
+    </script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const body = document.querySelector('body'); // Seleziona direttamente l'elemento body
+
+    function adjustScale() {
+        if (window.innerWidth < 700) {
+            // Imposta l'origine della trasformazione nel centro della pagina
+            body.style.transformOrigin = 'top left';
+            // Applica la scala e trasla la pagina per mantenerla visibile
+            body.style.transform = 'scale(window.innerWidth/700) translate(0, 0)'; // Sposta la pagina a sinistra
+        } else {
+            body.style.transform = 'scale(1) translate(0, 0)'; // Ripristina la scala e la posizione normale
+        }
+    }
+
+    // Chiamata iniziale
+    adjustScale();
+
+    // Aggiungi un listener per aggiornare la scala su ridimensionamento della finestra
+    window.addEventListener('resize', adjustScale);
+});
+</script>
+
+
+
+
+<script>
+
+const fintechSequence = [
+{ id: 0, concept: "Wallet", description: "Initial funds are available." },
+{ id: 1, concept: "Credit Card", description: "Initiate a payment." },
+{ id: 2, concept: "POS Terminal", description: "Payment is processed." },
+{ id: 3, concept: "Receipt", description: "Proof of transaction." },
+{ id: 4, concept: "Account Balance", description: "Reflects the transaction." },
+{ id: 5, concept: "Direct Debit", description: "Automatic deduction." },
+{ id: 6, concept: "Wire Transfer", description: "Send money between accounts." },
+{ id: 7, concept: "Expense Report", description: "Analyze recent spending." },
+{ id: 8, concept: "Budget Plan", description: "Allocate funds for future use." },
+{ id: 9, concept: "Savings", description: "Set aside money." },
+{ id: 10, concept: "Investment Portfolio", description: "Allocate savings into assets." },
+{ id: 11, concept: "Stock Purchase", description: "Buy shares in a company." },
+{ id: 12, concept: "Market Analysis", description: "Assess stock performance." },
+{ id: 13, concept: "Dividend", description: "Earn income from stocks." },
+{ id: 14, concept: "Interest Rate", description: "Account for investment growth." },
+{ id: 15, concept: "Reinvestment", description: "Add gains to portfolio." },
+{ id: 16, concept: "Bond Purchase", description: "Invest in safer financial instruments." },
+{ id: 17, concept: "Mutual Fund", description: "Pool money into diversified assets." },
+{ id: 18, concept: "Wealth Growth", description: "Observe increasing capital." },
+{ id: 19, concept: "Financial Goal", description: "Set a target for wealth." },
+{ id: 20, concept: "Insurance Policy", description: "Protect assets from risk." },
+{ id: 21, concept: "Risk Assessment", description: "Evaluate potential losses." },
+{ id: 22, concept: "Premium Payment", description: "Pay for insurance coverage." },
+{ id: 23, concept: "Claim Submission", description: "File for compensation." },
+{ id: 24, concept: "Claim Approval", description: "Get insurance payout." },
+{ id: 25, concept: "Retirement Fund", description: "Contribute to future income." },
+{ id: 26, concept: "Pension Plan", description: "Long-term retirement saving." },
+{ id: 27, concept: "Asset Allocation", description: "Balance risk and reward." },
+{ id: 28, concept: "Tax Planning", description: "Minimize taxable income." },
+{ id: 29, concept: "Tax Filing", description: "Submit returns to the government." },
+{ id: 30, concept: "Tax Refund", description: "Receive tax credits." },
+{ id: 31, concept: "Loan Application", description: "Request financial assistance." },
+{ id: 32, concept: "Loan Approval", description: "Lender agrees to provide funds." },
+{ id: 33, concept: "Interest Payment", description: "Pay interest on borrowed money." },
+{ id: 34, concept: "Debt Repayment", description: "Reduce outstanding debt." },
+{ id: 35, concept: "Credit Score", description: "Monitor financial reputation." },
+{ id: 36, concept: "Loan Refinancing", description: "Adjust loan terms for better rates." },
+{ id: 37, concept: "Mortgage", description: "Secure a home loan." },
+{ id: 38, concept: "Property Purchase", description: "Acquire real estate." },
+{ id: 39, concept: "Lease Agreement", description: "Sign rental or lease contract." },
+{ id: 40, concept: "Real Estate Investment", description: "Buy property for income." },
+{ id: 41, concept: "Rental Income", description: "Earn money from tenants." },
+{ id: 42, concept: "Home Equity", description: "Build value in owned property." },
+{ id: 43, concept: "Portfolio Diversification", description: "Expand asset range." },
+{ id: 44, concept: "Crowdfunding", description: "Invest in community-driven projects." },
+{ id: 45, concept: "Venture Capital", description: "Invest in startups." },
+{ id: 46, concept: "Exit Strategy", description: "Plan to withdraw from investments." },
+{ id: 47, concept: "Stock Sale", description: "Liquidate shares for cash." },
+{ id: 48, concept: "Asset Liquidation", description: "Convert assets into cash." },
+{ id: 49, concept: "Financial Advisor", description: "Seek professional guidance." },
+{ id: 50, concept: "Tax Audit", description: "Review financial records by tax authorities." },
+{ id: 51, concept: "Compliance Check", description: "Ensure adherence to regulations." },
+{ id: 52, concept: "Bankruptcy Filing", description: "Declare inability to repay debts." },
+{ id: 53, concept: "Debt Settlement", description: "Negotiate reduced repayment." },
+{ id: 54, concept: "Financial Recovery", description: "Rebuild after loss." },
+{ id: 55, concept: "Stable Investment", description: "Focus on low-risk, steady returns." },
+{ id: 56, concept: "Goal Achievement", description: "Meet the set financial target." },
+{ id: 57, concept: "Wealth Protection", description: "Secure long-term financial security." },
+{ id: 58, concept: "Legacy Planning", description: "Plan for wealth transfer." },
+{ id: 59, concept: "Estate Management", description: "Oversee posthumous asset distribution." },
+{ id: 60, concept: "Inheritance", description: "Transfer wealth to heirs." },
+{ id: 61, concept: "Financial Independence", description: "Achieve complete self-sufficiency." }
+];
+
+const fintechConnections = [
+{ from: 0, to: 1, description: "After a credit card payment, the POS terminal processes the transaction." },
+{ from: 1, to: 2, description: "After analyzing the market, dividends can be earned from stocks." },
+{ from: 2, to: 3, description: "A signed contract results in property acquisition, impacting account balance." },
+{ from: 3, to: 4, description: "Market analysis adjusts budget planning for the next steps." },
+{ from: 4, to: 5, description: "Budgeting leads to savings, which can be used for wire transfers." },
+{ from: 5, to: 6, description: "Savings grow and are tracked in an expense report." },
+{ from: 6, to: 7, description: "Analyzing expenses informs the investment portfolio strategy." },
+{ from: 7, to: 8, description: "Budget planning leads to savings." },
+{ from: 8, to: 9, description: "Savings contribute to the investment portfolio." },
+{ from: 9, to: 10, description: "With an investment portfolio established, stocks can be purchased." },
+{ from: 10, to: 11, description: "Stock purchases lead to market analysis to assess performance." },
+{ from: 11, to: 12, description: "After analysis, dividends are earned from stocks." },
+{ from: 12, to: 13, description: "Dividends and stock growth are influenced by interest rates." },
+{ from: 13, to: 14, description: "Interest encourages reinvestment into the portfolio." },
+{ from: 14, to: 15, description: "Reinvestment includes purchasing bonds for stability." },
+{ from: 15, to: 16, description: "Bond purchases diversify into mutual funds." },
+{ from: 16, to: 17, description: "Mutual funds contribute to wealth growth." },
+{ from: 17, to: 18, description: "Wealth growth leads to setting financial goals." },
+{ from: 18, to: 19, description: "Achieving financial goals requires protecting assets with insurance." },
+{ from: 19, to: 20, description: "Insurance requires risk assessment for coverage." },
+{ from: 20, to: 21, description: "After risk is assessed, premiums are paid for coverage." },
+{ from: 21, to: 22, description: "Premium payments enable filing insurance claims." },
+{ from: 22, to: 23, description: "Claim submission leads to claim approval and payout." },
+{ from: 23, to: 24, description: "Insurance payouts contribute to retirement funds." },
+{ from: 24, to: 25, description: "Retirement funds feed into pension planning." },
+{ from: 25, to: 26, description: "Pension planning influences asset allocation." },
+{ from: 26, to: 27, description: "Asset allocation impacts tax planning." },
+{ from: 27, to: 28, description: "Tax planning results in tax filing." },
+{ from: 28, to: 29, description: "Tax filing leads to potential tax refunds." },
+{ from: 29, to: 30, description: "Tax refunds can be used for loan applications." },
+{ from: 30, to: 31, description: "Approved loans provide access to more funds." },
+{ from: 31, to: 32, description: "Loans incur interest payments." },
+{ from: 32, to: 33, description: "Repaying loans reduces debt." },
+{ from: 33, to: 34, description: "Reduced debt positively affects the credit score." },
+{ from: 34, to: 35, description: "A good credit score improves loan refinancing options." },
+{ from: 35, to: 36, description: "Refinanced loans support mortgage applications." },
+{ from: 36, to: 37, description: "A mortgage enables property purchase." },
+{ from: 37, to: 38, description: "A purchased property results in lease agreements." },
+{ from: 38, to: 39, description: "Real estate can become an investment for rental income." },
+{ from: 39, to: 40, description: "Rental income grows home equity." },
+{ from: 40, to: 41, description: "Increased equity improves portfolio diversification." },
+{ from: 41, to: 42, description: "Portfolio diversification leads to crowdfunding opportunities." },
+{ from: 42, to: 43, description: "Crowdfunding projects can lead to venture capital investments." },
+{ from: 43, to: 44, description: "Venture capital results in creating an exit strategy." },
+{ from: 44, to: 45, description: "Exit strategies often involve selling stocks." },
+{ from: 45, to: 46, description: "Selling stocks leads to asset liquidation for cash." },
+{ from: 46, to: 47, description: "Liquidated assets provide cash for financial advisory services." },
+{ from: 47, to: 48, description: "Financial advisors ensure tax audits are prepared for." },
+{ from: 48, to: 49, description: "Tax audits verify compliance checks." },
+{ from: 49, to: 50, description: "Compliance checks protect against bankruptcy filing." },
+{ from: 50, to: 51, description: "Filing for bankruptcy leads to debt settlement." },
+{ from: 51, to: 52, description: "Debt settlement helps financial recovery." },
+{ from: 52, to: 53, description: "Financial recovery encourages stable investments." },
+{ from: 53, to: 54, description: "Stable investments help achieve financial goals." },
+{ from: 54, to: 55, description: "Financial goals lead to wealth protection." },
+{ from: 55, to: 56, description: "Protecting wealth is vital for legacy planning." },
+{ from: 56, to: 57, description: "Legacy planning ensures estate management." },
+{ from: 57, to: 58, description: "Estate management governs inheritance distribution." },
+{ from: 58, to: 59, description: "Inheritance transfers wealth to the next generation." },
+{ from: 59, to: 60, description: "Achieving inheritance ensures financial independence." }
+];
+
+
+  let currentIndex = 0;
+
+  function displayConcept() {
+    const concept1 = fintechSequence[currentIndex];
+    const concept2 = fintechSequence[currentIndex + 1];
+    const concept3 = fintechSequence[currentIndex + 2];
+
+    const connection = fintechConnections.find(conn => conn.from === currentIndex);
+
+    let output = `<h3>${concept1.id}. ${concept1.concept}</h3><p>${concept1.description}</p>`;
+    output += `<h3>${concept2.id}. ${concept2.concept}</h3><p>${concept2.description}</p>`;
+
+    if (connection) {
+      output += `<div class="highlight">from ${connection.from} to ${connection.to} → ${connection.to + 1}: ${connection.description}</div>`;
+    } else {
+      output += "<p>End of sequence.</p>";
+    }
+
+    if (concept3) {
+      output += `<h3>${concept3.id}. ${concept3.concept}</h3><p>${concept3.description}</p>`;
+    }
+
+    document.getElementById("conceptView").innerHTML = output;
+  }
+
+  function next() {
+    if (currentIndex < fintechSequence.length - 3) {
+      currentIndex++;
+      displayConcept();
+    }
+  }
+
+  function previous() {
+    if (currentIndex > 0) {
+      currentIndex--;
+      displayConcept();
+    }
+  }
+
+  // Initialize the view
+  displayConcept();
+</script>
+
+<script>
+  function setRandomBackground() {
+    const placeholders = document.getElementsByClassName('img-placeholder');
+
+    // Imposta l'immagine di sfondo per tutti gli elementi con la classe 'img-placeholder'
+    for (let i = 0; i < placeholders.length; i++) {
+      randomIndex = Math.floor(Math.random() * 3); // Genera un numero tra 0 e 2
+      imageUrl = `finadviserai-${randomIndex}.jpeg`;
+      placeholders[i].style.backgroundImage = `url('${imageUrl}')`;
+    }
+  }
+
+  // Imposta l'immagine casuale quando la pagina viene caricata
+  setRandomBackground();
+</script>
+
+</body>
+</html>
